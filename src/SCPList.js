@@ -27,7 +27,7 @@ class SCPList extends Component {
 				<ul>
 					{scps?.map((item, i) => (
 						<li key={"scp-list-" + i}>
-							<a href={`/article/${item._id}`}>{item.title}</a>
+							<a href={`/${process.env.REACT_APP_REPOSITORY}/article/${item._id}`}>{item.title}</a>
 						</li>
 					))}
 				</ul>

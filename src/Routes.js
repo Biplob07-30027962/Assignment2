@@ -1,17 +1,16 @@
-import { Switch, Route, useLocation } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 
 import Article from "./Article";
 import SCPList from "./SCPList";
 
+const prefix = process.env.REACT_APP_REPOSITORY
 
 const Routes = () => {
-    const loc = useLocation()
-    console.table(loc)
     return <Switch>
-        <Route path="/" exact>
+        <Route path={"/" + prefix} exact>
             <SCPList />
         </Route>
-        <Route path="/article/*">
+        <Route path={`/${prefix}/article/*`}>
             <Article />
         </Route>
     </Switch>
