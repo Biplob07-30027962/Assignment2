@@ -1,9 +1,6 @@
 import React, { Component } from "react";
 import scpAPI from "./data/service/scp.service";
 
-const prefix = process.env.REACT_APP_REPOSITORY
-
-
 class SCPList extends Component {
 	constructor(props) {
 		super(props);
@@ -30,7 +27,7 @@ class SCPList extends Component {
 				<ul>
 					{scps?.map((item, i) => (
 						<li key={"scp-list-" + i}>
-							<a href={`${prefix ? "/" + prefix : ""}/article/${item._id}`}>{item.title}</a>
+							<a href={`/article/${item._id}`}>{item.title}</a>
 						</li>
 					))}
 				</ul>

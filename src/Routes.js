@@ -3,14 +3,12 @@ import { Switch, Route } from "react-router-dom";
 import Article from "./Article";
 import SCPList from "./SCPList";
 
-const prefix = process.env.REACT_APP_REPOSITORY
-
 const Routes = () => {
     return <Switch>
-        <Route path={"/" + prefix} exact>
+        <Route path={"/"} exact>
             <SCPList />
         </Route>
-        <Route path={`${prefix ? "/" + prefix : ""}/article/*`}>
+        <Route path={`/article/*`}>
             <Article />
         </Route>
     </Switch>
