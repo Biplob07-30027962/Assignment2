@@ -1,0 +1,116 @@
+* {
+	box-sizing: border-box;
+}
+:root {
+	--ff-primary: "Roboto", sans-serif;
+	--br: 5px;
+	--shadow: 0 21px 36px rgba(0, 0, 0, 0.05);
+}
+body {
+	font-family: "Roboto", sans-serif;
+	font-size: 16px;
+
+	margin: 0;
+	padding: 0;
+
+	background-color: rgb(27, 25, 25);
+}
+.App {
+	max-width: 840px;
+	margin: 0 auto;
+	padding: 20px;
+	background-image: url("https://i.pinimg.com/originals/7d/41/be/7d41be34dc60d063a6b1c4805eb230e8.jpg?q=60");
+	text-decoration-style: var(--shadow);
+}
+main {
+	padding: 30px 10px;
+	min-height: 55vh;
+	text-align: center;
+	text-decoration-color: whitesmoke;
+}
+h4 {
+	color: whitesmoke;
+}
+
+header {
+	margin-top: 5px;
+
+	padding: 5px;
+	border-radius: 5px;
+
+	box-shadow: var(--shadow);
+	background-color:rgb(136, 130, 130);
+	
+}
+header h1 {
+	font-weight: 500;
+}
+
+button {
+	padding: 12.5px 15px;
+	border-radius: var(--br);
+	border: none;
+	background-color: rgb(184, 135, 135);
+	box-shadow: var(--shadow);
+	font-family: var(--ff-primary);
+	font-weight: 500;
+	cursor: pointer;
+}
+
+button.primary {
+	background-color: rgb(19, 148, 19);
+	color: white;
+}
+
+ul li {
+	cursor: pointer;
+	color: whitesmoke;
+}
+
+article {
+	margin: 50px 0;
+	color:whitesmoke;
+}
+
+article h2 {
+	font-family: var(--ff-primary);
+	margin-bottom: 0;
+	color:white;
+}
+
+.info {
+	padding: 10px;
+}
+.info .class {
+	margin-top: 10px;
+	color: grey;
+}
+.info .class span {
+	color: black;
+}
+.details .part {
+	margin: 20px 0;
+}
+.details p {
+	text-align: justify;
+	line-height: 1.6;
+	margin: 0;
+	color:white;
+}
+.details p.head {
+	font-weight: 700;
+	font-size: 1.2rem;
+	font-family: var(--ff-primary);
+	margin-bottom: 15px;
+}
+.details img {
+	
+	width: 400px;
+	
+	
+}
+
+footer {
+	text-align: right;
+	text-emphasis-color: red;
+}
