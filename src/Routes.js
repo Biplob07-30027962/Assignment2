@@ -10,7 +10,7 @@ const Routes = () => {
         <Route path={"/" + prefix} exact>
             <SCPList />
         </Route>
-        <Route path={`/${prefix}/article/*`}>
+        <Route path={`${prefix ? "/" + prefix : ""}/article/*`}>
             <Article />
         </Route>
     </Switch>
