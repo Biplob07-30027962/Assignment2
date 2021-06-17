@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import scpAPI from "./data/service/scp.service";
 
 class SCPList extends Component {
@@ -13,7 +14,7 @@ class SCPList extends Component {
 		try {
 			const { data: scps } = await scpAPI.get("/Data");
 			this.setState({ scps });
-		} catch (ex) {}
+		} catch (ex) { }
 	};
 	componentDidMount() {
 		this.fetchScps();
@@ -27,13 +28,17 @@ class SCPList extends Component {
 				<ul>
 					{scps?.map((item, i) => (
 						<li key={"scp-list-" + i}>
-							<a href={`/article/${item._id}`}>{item.title}</a>
+							<ListItem id={item._id} title={item.title} />
 						</li>
 					))}
 				</ul>
 			</div>
 		);
 	}
+}
+
+const ListItem = ({ id, title }) => {
+	return <Link to={`/article/${id}`}>{title}</Link>
 }
 
 export default SCPList;
